@@ -1,0 +1,45 @@
+Views - Tabela virtual composta por linhas e colunas de dados vindos de tabelas relacionadas numa query;
+	* Vantagens: REUSO, SEGURANÇA, SIMPLIFICAÇÃO DO CÓDIGO
+
+	Sintaxe: 
+		CREATE VIEW v_nome AS
+		* Comando SQL *
+
+Try Catch - Comandos utilizados para controlar erros em grupos de comandos;
+	* O bloco TRY é utilizado para inserirmos os comandos e, se houver algum erro, 
+	o bloco CATCH será executado.
+	* Caso os comandos dentro do bloco TRY não apresentarem erros, será executado o comando
+	logo após o comando END CATCH, após a execução do último comando do bloco TRY.
+
+	Sintaxe: 
+		BEGIN TRY 
+		* Comando SQL *
+		END TRY
+		BEGIN CATCH
+		* Comando SQL *
+		END CATCH
+
+Stored Procedure - Coleção de comandos SQL criada para utilização permanente ou temporária.
+	
+	Sintaxe para criar um SP:
+		CREATE PROCEDURE nome_sp (@variavel [nome da variavel] AS int [tipo de variavel])
+		AS
+		 BEGIN
+		  * Comando SQL *
+		 END
+
+	Sintaxe para correr um SP:
+		EXEC nome_sp
+
+Joins - Associações de tabelas
+
+	Sintaxe:
+		SELECT * FROM nome_tabela1 (LEFT, RIGHT, INNER, FULL OUTER) JOIN nome_tabela2 
+		ON nome_tabela1.nome_campo1=nome_tabela2.nome_campo2
+
+Transactions - Uma ou mais alterações feitas na base de dados.
+
+	Sintaxe: 
+		BEGIN TRANSACTION
+		* Comando SQL *
+		COMMIT ou ROLLBACK
